@@ -12,4 +12,6 @@ export class CharPickerComponent {
 
   @Output()
   pickChar = new EventEmitter<Char>();
+
+  flipped = false;
 }

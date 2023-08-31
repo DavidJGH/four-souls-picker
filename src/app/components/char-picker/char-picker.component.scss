@@ -24,10 +24,19 @@
     .card {
       flex: .5;
       margin: 1%;
+      position: relative;
 
-      img {
+      .card-img {
         width: 100%;
-        border-radius: 15px;
+        border-radius: 8px;
+      }
+
+      .flip {
+        position: absolute;
+        right: -12px;
+        top: -12px;
+        width: 40%;
+        z-index: 5;
       }
     }
   }

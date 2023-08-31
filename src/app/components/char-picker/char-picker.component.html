@@ -1,11 +1,13 @@
 <div class="container">
   <div class="card-container">
     <div class="card">
-      <img [src]="char?.char" alt="character">
+      <img class="card-img" *ngIf="!flipped" [src]="char?.char" alt="character">
+      <img class="card-img" *ngIf="flipped" [src]="char?.back" alt="character-back">
+      <img class="flip" src="assets/imgs/flip.png"
+           *ngIf="char?.back != 'none'" (click)="flipped = !flipped" alt="flip">
     </div>
-    <!--  <img *ngIf="char?.back != 'none'" [src]="char?.back">-->
     <div class="card">
-      <img *ngIf="char?.item != 'none'" [src]="char?.item" alt="item">
+      <img class="card-img" *ngIf="char?.item != 'none'" [src]="char?.item" alt="item">
     </div>
   </div>
 
