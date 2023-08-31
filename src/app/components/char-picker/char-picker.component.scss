@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 10px 5px;
+}
+
+.container {
+  width: 100vw;
+  max-width: 1000px;
+
+  border: 10px solid #274c77;
+  border-radius: calc(min(100vw, 1000px) * 0.01 + 20px);
+
+  @media (min-width: 600px) and (orientation: landscape) {
+    &{
+      width: 80vw;
+      border-radius: calc(min(80vw, 1000px) * 0.01 + 20px);
+    }
+  }
+
+  .card-container {
+    display: flex;
+
+    .card {
+      flex: .5;
+      margin: 1%;
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+.button-select {
+  width: calc(100% - 30px - 30px);
+  margin: 0 30px 10px;
+  padding: 15px;
+}

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="card-container">
+    <div class="card">
+      <img [src]="char?.char" alt="character">
+    </div>
+    <!--  <img *ngIf="char?.back != 'none'" [src]="char?.back">-->
+    <div class="card">
+      <img *ngIf="char?.item != 'none'" [src]="char?.item" alt="item">
+    </div>
+  </div>
+
+  <button class="button-select" (click)="pickChar.emit(char)">SELECT</button>
+</div>

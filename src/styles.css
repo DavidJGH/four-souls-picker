@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'SoulsTitle';
+    src: url('assets/fonts/Font_soulsV2_Title-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'SoulsBody';
+  src: url('assets/fonts/Font_soulsV2_Body-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background: #e7ecef;
+}
+
+* {
+  font-family: SoulsTitle, sans-serif;
+}
+
+button {
+  background: #6096ba;
+  border: none;
+  font: inherit;
+  outline: inherit;
+  border-radius: 11px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 10px;
+  text-align: center;
+}
+
+button:hover {
+  background: #6ca8d0;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
