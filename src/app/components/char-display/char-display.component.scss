@@ -22,23 +22,9 @@
     display: flex;
     flex-direction: column;
 
-    .card {
+    >* {
       flex: .5;
       margin: 1%;
-      position: relative;
-
-      .card-img {
-        width: 100%;
-        border-radius: 8px;
-      }
-
-      .flip {
-        position: absolute;
-        right: -12px;
-        top: -12px;
-        width: 40%;
-        z-index: 5;
-      }
     }
 
     @media (min-width: 600px) and (orientation: landscape) {

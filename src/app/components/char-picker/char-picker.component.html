@@ -1,14 +1,7 @@
 <div class="container">
   <div class="card-container">
-    <div class="card">
-      <img class="card-img" *ngIf="!flipped" [src]="char?.char" alt="character">
-      <img class="card-img" *ngIf="flipped" [src]="char?.back" alt="character-back">
-      <img class="flip" src="assets/imgs/flip.png"
-           *ngIf="char?.back != 'none'" (click)="flipped = !flipped" alt="flip">
-    </div>
-    <div class="card">
-      <img class="card-img" *ngIf="char?.item != 'none'" [src]="char?.item" alt="item">
-    </div>
+    <app-card [front]="char?.char" [back]="char?.back" [tappable]="false"></app-card>
+    <app-card [front]="char?.item" [tappable]="false"></app-card>
   </div>
 
   <button class="button-select" (click)="pickChar.emit(char)">SELECT</button>

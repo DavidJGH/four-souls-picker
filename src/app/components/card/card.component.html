@@ -1,0 +1,6 @@
+<div class="card" *ngIf="front != 'none'">
+  <img class="card-img" [style.opacity]="flipped ? 0 : 1" [src]="front" alt="card">
+  <img class="card-img card-back" [style.opacity]="flipped ? 1 : 0" [src]="back" alt="card-back">
+  <img class="flip" src="assets/imgs/flip.png"
+       *ngIf="back != 'none'" (click)="flipped = !flipped" alt="flip">
+</div>

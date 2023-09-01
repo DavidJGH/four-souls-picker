@@ -4,12 +4,14 @@ import {AppComponent} from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CharPickerComponent } from './components/char-picker/char-picker.component';
 import {CharDisplayComponent} from './components/char-display/char-display.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharPickerComponent,
-    CharDisplayComponent
+    CharDisplayComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,4 @@ export class CharDisplayComponent {
 
   @Output()
   back = new EventEmitter();
-
-  flipped = false;
 }
