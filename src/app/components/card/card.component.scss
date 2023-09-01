@@ -1,11 +1,13 @@
 .card {
   width: 100%;
   position: relative;
+  user-select: none;
 
   .card-img {
     width: 100%;
     border-radius: 8px;
-    transition: transform .25s;
+    transition: transform .4s;
+    backface-visibility: hidden;
   }
 
   .card-back {
@@ -15,6 +17,14 @@
 
   .tapped {
     transform: rotate(90deg) scale(0.733231707);
+  }
+
+  .flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flipped.tapped {
+    transform: rotate(90deg) scale(0.733231707) rotateY(180deg);
   }
 
   .flip {
