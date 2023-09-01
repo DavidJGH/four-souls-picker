@@ -5,11 +5,16 @@
   .card-img {
     width: 100%;
     border-radius: 8px;
+    transition: transform .25s;
   }
 
   .card-back {
     position: absolute;
     left: 0;
+  }
+
+  .tapped {
+    transform: rotate(90deg) scale(0.733231707);
   }
 
   .flip {
@@ -18,6 +23,23 @@
     top: -5px;
     width: 40%;
     z-index: 5;
+  }
+
+  .tap {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    padding: 15px 20px;
+    background: #6096bab2;
+  }
+
+  .tap:hover {
+    background: #6ca8d0d2;
+  }
+
+  .tap:active {
+    top: unset;
+    bottom: 9px;
   }
 
 }

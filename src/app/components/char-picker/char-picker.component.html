@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card-container">
-    <app-card [front]="char?.front" [back]="char?.back" [tappable]="false"></app-card>
-    <app-card [front]="char?.item" [back]="char?.itemBack" [tappable]="false"></app-card>
+    <app-card [front]="char?.front" [back]="char?.back"></app-card>
+    <app-card [front]="char?.item" [back]="char?.itemBack"></app-card>
   </div>
 
   <button class="button-select" (click)="pickChar.emit(char)">SELECT</button>

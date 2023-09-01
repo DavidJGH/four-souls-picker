@@ -13,7 +13,9 @@ export class CardComponent {
   back: string | undefined = 'none';
 
   @Input()
-  tappable = true;
+  tappable = false;
+
+  tapped = false;
 
   flipped = false;
 }
