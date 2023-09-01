@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {Char, chars} from './models/char.model';
+import {Char, charsBySet, sets} from './models/char.model';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +21,12 @@ export class AppComponent {
     numGen: new FormControl(2)
   })
 
+  includedSets = sets;
+
+  get chars(): Char[] {
+    return this.includedSets.map((set) => charsBySet[set]).flat();
+  }
+
   constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
     this.numbers = Array(this.maxSelect).fill(0).map((x, i) => i + 1);
   }
@@ -32,6 +38,8 @@ export class AppComponent {
     this.changeDetectorRef.detectChanges();
 
     const numGen = this.genForm.value.numGen ?? 2;
+
+    const chars = this.chars;
 
     if (numGen < chars.length) {
       const ids = [2];

@@ -4,12 +4,13 @@ export interface Char {
   back: string,
   item: string,
   itemBack: string,
-  itemTappable: boolean,
-  set: string
+  itemTappable: boolean
 }
 
-export const chars: Char[] =
-  [
+export const sets = ['Base Game V2', 'Gold Box V2', 'Four Souls+ V2', 'Requiem', 'Requiem Warp Zone', 'Tapeworm'];
+
+export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
+  'Base Game V2': [
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-isaac.png',
       back: 'none',
@@ -17,7 +18,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 1,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-maggy.png',
@@ -26,7 +26,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 2,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-cain.png',
@@ -35,7 +34,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 3,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-judas.png',
@@ -44,7 +42,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 4,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-blue_baby.png',
@@ -53,7 +50,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 5,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-eve.png',
@@ -62,7 +58,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 6,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-samson.png',
@@ -71,7 +66,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 7,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-lazarus.png',
@@ -80,7 +74,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: false,
       id: 8,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-lilith.png',
@@ -89,7 +82,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 9,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-the_forgotten.png',
@@ -98,7 +90,6 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: true,
       id: 10,
-      set: 'Base Game V2'
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-eden.png',
@@ -107,16 +98,16 @@ export const chars: Char[] =
       itemBack: 'none',
       itemTappable: false,
       id: 11,
-      set: 'Base Game V2'
-    },
+    }
+  ],
+  'Gold Box V2': [
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-azazel.png',
       back: 'none',
       item: 'https://foursouls.com/wp-content/uploads/2022/01/g2-lord_of_the_pit.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 12,
-      set: 'Gold Box V2'
+      id: 12
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-the_lost.png',
@@ -124,8 +115,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/g2-holy_mantle.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 13,
-      set: 'Gold Box V2'
+      id: 13
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-the_keeper.png',
@@ -133,8 +123,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/g2-wooden_nickel.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 14,
-      set: 'Gold Box V2'
+      id: 14
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-apollyon.png',
@@ -142,17 +131,17 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/g2-void.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 15,
-      set: 'Gold Box V2'
-    },
+      id: 15
+    }
+  ],
+  'Four Souls+ V2': [
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-bum_bo.png',
       back: 'none',
       item: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-bag_o_trash.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 16,
-      set: 'Four Souls+ V2'
+      id: 16
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-dark_judas.png',
@@ -160,8 +149,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-dark_arts.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 17,
-      set: 'Four Souls+ V2'
+      id: 17
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-guppy.png',
@@ -169,8 +157,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-infestation.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 18,
-      set: 'Four Souls+ V2'
+      id: 18
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-whore_of_babylon.png',
@@ -178,17 +165,17 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-gimpy.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 19,
-      set: 'Four Souls+ V2'
-    },
+      id: 19
+    }
+  ],
+  'Requiem': [
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-bethany.png',
       back: 'none',
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-book_of_virtues.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 20,
-      set: 'Requiem'
+      id: 20
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-jacob_and_esau.png',
@@ -196,8 +183,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-sibling_rivalry.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 21,
-      set: 'Requiem'
+      id: 21
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_broken.png',
@@ -205,8 +191,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-spindown_dice.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 22,
-      set: 'Requiem'
+      id: 22
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_dauntless.png',
@@ -214,8 +199,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-hypercoagulation.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 23,
-      set: 'Requiem'
+      id: 23
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_hoarder.png',
@@ -223,8 +207,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-bag_of_crafting.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 24,
-      set: 'Requiem'
+      id: 24
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_deceiver.png',
@@ -232,8 +215,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-ceremonial_blade.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 25,
-      set: 'Requiem'
+      id: 25
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_soiled.png',
@@ -241,8 +223,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-ibs.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 26,
-      set: 'Requiem'
+      id: 26
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_curdled.png',
@@ -250,8 +231,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-sumptorium.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 27,
-      set: 'Requiem'
+      id: 27
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_savage.png',
@@ -259,8 +239,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-berserk.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 28,
-      set: 'Requiem'
+      id: 28
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_benighted.png',
@@ -268,8 +247,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-hemoptysis.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 29,
-      set: 'Requiem'
+      id: 29
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_enigma.png',
@@ -277,8 +255,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-flip.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 30,
-      set: 'Requiem'
+      id: 30
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_capricious.png',
@@ -286,8 +263,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-glitch.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 31,
-      set: 'Requiem'
+      id: 31
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_baleful.png',
@@ -295,8 +271,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-soulbond.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 32,
-      set: 'Requiem'
+      id: 32
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_harlot.png',
@@ -304,8 +279,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-gello.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 33,
-      set: 'Requiem'
+      id: 33
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_miser.png',
@@ -313,8 +287,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-keepers_bargain.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 34,
-      set: 'Requiem'
+      id: 34
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_empty.png',
@@ -322,8 +295,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-abyss.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 35,
-      set: 'Requiem'
+      id: 35
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_fettered.png',
@@ -331,8 +303,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-dead_weight.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 36,
-      set: 'Requiem'
+      id: 36
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_zealot.png',
@@ -340,8 +311,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-lemegeton.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 37,
-      set: 'Requiem'
+      id: 37
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_deserter.png',
@@ -349,8 +319,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-anima_sola.png',
       itemBack: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_revenant.png',
       itemTappable: true,
-      id: 38,
-      set: 'Requiem'
+      id: 38
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-flash_isaac.png',
@@ -358,17 +327,17 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/r-classic_roller.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 39,
-      set: 'Requiem'
-    },
+      id: 39
+    }
+  ],
+  'Requiem Warp Zone': [
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-ash.png',
       back: 'none',
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-ball_of_tumors.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 40,
-      set: 'Requiem Warp Zone'
+      id: 40
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-steven.png',
@@ -376,8 +345,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-lil_steven.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 41,
-      set: 'Requiem Warp Zone'
+      id: 41
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-bum_bo_the_weird.png',
@@ -385,8 +353,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-strange_marble.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 42,
-      set: 'Requiem Warp Zone'
+      id: 42
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-edmund.png',
@@ -394,8 +361,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-the_real_left_hand.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 43,
-      set: 'Requiem Warp Zone'
+      id: 43
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-abe.png',
@@ -403,8 +369,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-possession.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 44,
-      set: 'Requiem Warp Zone'
+      id: 44
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-baba.png',
@@ -412,8 +377,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-is_you.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 45,
-      set: 'Requiem Warp Zone'
+      id: 45
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-blind_johnny.png',
@@ -421,8 +385,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-johnnys_knives.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 46,
-      set: 'Requiem Warp Zone'
+      id: 46
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-blue_archer.png',
@@ -430,8 +393,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-bow_and_arrow.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 47,
-      set: 'Requiem Warp Zone'
+      id: 47
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-boyfriend.png',
@@ -439,8 +401,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-girlfriend.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 48,
-      set: 'Requiem Warp Zone'
+      id: 48
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-captain_viridian.png',
@@ -448,8 +409,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-gravity.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 49,
-      set: 'Requiem Warp Zone'
+      id: 49
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-crewmate.png',
@@ -457,8 +417,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-emergency_meeting.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 50,
-      set: 'Requiem Warp Zone'
+      id: 50
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-guy_spelunky.png',
@@ -466,8 +425,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-spelunking_pack.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 51,
-      set: 'Requiem Warp Zone'
+      id: 51
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-johnny.png',
@@ -475,8 +433,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-football.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 52,
-      set: 'Requiem Warp Zone'
+      id: 52
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-pink_knight.png',
@@ -484,8 +441,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-lollypop.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 53,
-      set: 'Requiem Warp Zone'
+      id: 53
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-psycho_goreman.png',
@@ -493,8 +449,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-hunky_boys.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 54,
-      set: 'Requiem Warp Zone'
+      id: 54
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-quote.png',
@@ -502,8 +457,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-polar_star.png',
       itemBack: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-booster_v20.png',
       itemTappable: true,
-      id: 55,
-      set: 'Requiem Warp Zone'
+      id: 55
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-salad_fingers.png',
@@ -511,8 +465,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-rusty_spoons.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 56,
-      set: 'Requiem Warp Zone'
+      id: 56
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-the_knight.png',
@@ -520,8 +473,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-focus.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 57,
-      set: 'Requiem Warp Zone'
+      id: 57
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-the_silent.png',
@@ -529,8 +481,7 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-ring_of_the_snake.png',
       itemBack: 'none',
       itemTappable: false,
-      id: 58,
-      set: 'Requiem Warp Zone'
+      id: 58
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-yung_venuz.png',
@@ -538,16 +489,17 @@ export const chars: Char[] =
       item: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-pop_pop.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 59,
-      set: 'Requiem Warp Zone'
-    },
+      id: 59
+    }
+  ],
+  'Tapeworm': [
     {
       front: 'https://foursouls.com/wp-content/uploads/2021/07/tw-tapeworm.png',
       back: 'none',
       item: 'https://foursouls.com/wp-content/uploads/2021/07/tw-pink_proglottid.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 60,
-      set: 'Tapeworm'
+      id: 60
     }
   ]
+}
