@@ -1,5 +1,6 @@
 <ng-container *ngIf="!char">
-  <form [formGroup]="genForm" (ngSubmit)="generateChars()">
+  <form [formGroup]="genForm" (ngSubmit)="generateChars()" [class.title]="charOptions.length == 0">
+    <img *ngIf="charOptions.length == 0" class="logo" ngSrc="assets/imgs/logo.png" height="1415" width="1920" alt="logo">
     <div>
       Choose from
       <select formControlName="numGen">
