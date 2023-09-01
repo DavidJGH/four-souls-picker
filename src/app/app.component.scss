@@ -16,6 +16,9 @@ form {
     font-family: SoulsBody, sans-serif;
     font-size: $font-size;
   }
+}
+
+.gen-form {
 
   &.title {
     $font-size: 35px;
@@ -28,6 +31,12 @@ form {
 
     button {
       border: 5px solid #274c77;
+    }
+  }
+
+  &:not(.title) {
+    @media (max-width: 580px) {
+      margin-top: 60px;
     }
   }
 
@@ -77,4 +86,74 @@ form {
   top: 0;
   width: 0;
   height: 0;
+}
+
+.settings-container {
+  overflow: hidden;
+
+  .settings {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #dce1e7;
+    background: #2e598c;
+    padding: 15px 15px 9px 15px;
+    border-radius: 0 0 0 15px;
+
+    cursor: pointer;
+
+    z-index: 25;
+    filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.25));
+  }
+
+  .settings-menu {
+
+    filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.25));
+    border: 5px solid #274c77;
+    border-top: none;
+    border-right: none;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 20;
+
+    padding: 10px 20px 20px 10px;
+    border-radius: 0 0 0 15px;
+
+    background: #4a7cb7;
+
+    transform-origin: top right;
+    transition: right .5s;
+
+    &.closed {
+      right: -300px;
+    }
+
+    .settings-title {
+      font-size: 25px;
+      padding-top: 18px;
+      padding-bottom: 15px;
+      padding-left: 23px;
+    }
+
+    .sets-list {
+      text-align: left;
+
+      .set-entry {
+        padding-top: 3px;
+
+        user-select: none;
+
+        label {
+          vertical-align: text-top;
+        }
+
+        input {
+          accent-color: #c55151;
+        }
+      }
+    }
+  }
 }

@@ -11,6 +11,8 @@ export class AppComponent {
   readonly maxSelect = 5;
   readonly numbers: number[] = [];
 
+  settingsOpen = false;
+
   charOptions: Char[] = [];
 
   loadIndex = 0;
@@ -19,9 +21,15 @@ export class AppComponent {
 
   genForm = new FormGroup({
     numGen: new FormControl(2)
-  })
+  });
 
-  includedSets = sets;
+  sets = sets;
+
+  setsForm: FormGroup;
+
+  get includedSets(): string[] {
+    return sets.filter((set) => this.setsForm.value[set])
+  }
 
   get chars(): Char[] {
     return this.includedSets.map((set) => charsBySet[set]).flat();
@@ -29,6 +37,7 @@ export class AppComponent {
 
   constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
     this.numbers = Array(this.maxSelect).fill(0).map((x, i) => i + 1);
+    this.setsForm = new FormGroup(Object.fromEntries(sets.map(set => [set, new FormControl(true)])));
   }
 
   generateChars() {
@@ -49,8 +58,7 @@ export class AppComponent {
       }
 
       this.charOptions = ids.map((id) => chars[id]);
-    }
-    else {
+    } else {
       this.charOptions = chars;
     }
 
