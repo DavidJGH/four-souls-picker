@@ -42,7 +42,7 @@ export class AppComponent {
     const chars = this.chars;
 
     if (numGen < chars.length) {
-      const ids = [2];
+      const ids = [];
       while (ids.length < numGen) {
         const newIndex = Math.floor(Math.random() * chars.length);
         if (ids.indexOf(newIndex) === -1) ids.push(newIndex);
