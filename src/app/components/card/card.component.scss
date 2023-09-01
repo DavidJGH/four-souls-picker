@@ -5,6 +5,7 @@
 
   .card-img {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     transition: transform .4s;
     backface-visibility: hidden;
@@ -32,6 +33,7 @@
     right: -5px;
     top: -5px;
     width: 40%;
+    height: auto;
     z-index: 5;
   }
 

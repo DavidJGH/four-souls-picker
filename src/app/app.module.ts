@@ -5,6 +5,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { CharPickerComponent } from './components/char-picker/char-picker.component';
 import {CharDisplayComponent} from './components/char-display/char-display.component';
 import { CardComponent } from './components/card/card.component';
+import {NgOptimizedImage} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardComponent } from './components/card/card.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

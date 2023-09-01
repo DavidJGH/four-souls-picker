@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -18,4 +18,24 @@ export class CardComponent {
   tapped = false;
 
   flipped = false;
+
+  @Output()
+  cardLoaded = new EventEmitter();
+
+  frontDone = false;
+  backDone = false;
+
+  frontLoaded() {
+    this.frontDone = true;
+    if (this.back == 'none' || this.backDone) {
+      this.cardLoaded.emit();
+    }
+  }
+
+  backLoaded() {
+    this.backDone = true;
+    if (this.frontDone) {
+      this.cardLoaded.emit();
+    }
+  }
 }

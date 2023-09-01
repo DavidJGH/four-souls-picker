@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Char, chars} from './models/char.model';
 
@@ -13,23 +13,28 @@ export class AppComponent {
 
   charOptions: Char[] = [];
 
+  loadIndex = 0;
+
   char: Char | undefined = undefined;
 
   genForm = new FormGroup({
     numGen: new FormControl(2)
   })
 
-  constructor() {
+  constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
     this.numbers = Array(this.maxSelect).fill(0).map((x, i) => i + 1);
   }
 
   generateChars() {
     this.char = undefined;
+    this.charOptions = [];
+
+    this.changeDetectorRef.detectChanges();
 
     const numGen = this.genForm.value.numGen ?? 2;
 
     if (numGen < chars.length) {
-      const ids = [];
+      const ids = [2];
       while (ids.length < numGen) {
         const newIndex = Math.floor(Math.random() * chars.length);
         if (ids.indexOf(newIndex) === -1) ids.push(newIndex);
@@ -41,7 +46,7 @@ export class AppComponent {
       this.charOptions = chars;
     }
 
-    console.log(this.charOptions)
+    this.loadIndex = 0;
   }
 
   pickChar(char: Char) {
@@ -50,5 +55,11 @@ export class AppComponent {
 
   back() {
     this.char = undefined
+  }
+
+  loadNext() {
+    if (this.loadIndex < this.charOptions.length) {
+      this.loadIndex++;
+    }
   }
 }

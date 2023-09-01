@@ -1,8 +1,12 @@
 <div class="container">
   <div class="card-container">
-    <app-card [front]="char?.front" [back]="char?.back"></app-card>
-    <app-card [front]="char?.item" [back]="char?.itemBack"></app-card>
+    <app-card [front]="char?.front" [back]="char?.back" (cardLoaded)="charLoaded()"></app-card>
+    <app-card *ngIf="char?.item != 'none'" [front]="char?.item" [back]="char?.itemBack" (cardLoaded)="itemLoaded()"></app-card>
   </div>
 
   <button class="button-select" (click)="pickChar.emit(char)">SELECT</button>
+
+  <div class="load-container" *ngIf="!fullyDone">
+    <img class="die" ngSrc="assets/imgs/die.png" alt="die" height="128" width="128">
+  </div>
 </div>

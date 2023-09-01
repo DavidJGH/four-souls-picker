@@ -10,7 +10,11 @@
     <button type="submit">Roll Character(s)</button>
   </form>
 
-  <app-char-picker *ngFor="let charOption of charOptions" [char]="charOption" (pickChar)="pickChar($event)"></app-char-picker>
+  <div class="picker-container">
+    <app-char-picker *ngFor="let charOption of charOptions; let i = index" [skipLoad]="i < loadIndex" [waitForLoad]="i > loadIndex" [char]="charOption" (pickChar)="pickChar($event)" (loaded)="loadNext()"></app-char-picker>
+  </div>
 </ng-container>
 
 <app-char-display *ngIf="char" [char]="char" (back)="back()"></app-char-display>
+
+<img class="die-loader" ngSrc="assets/imgs/die.png" alt="die" height="128" width="128">
