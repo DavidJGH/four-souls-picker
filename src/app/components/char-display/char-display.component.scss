@@ -9,7 +9,6 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   @media (min-width: 600px) and (orientation: landscape) {
     & {
@@ -18,9 +17,11 @@
   }
 
   .card-container {
+    flex: 1;
     margin: 10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     >* {
       flex: .5;

@@ -1,3 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 form {
   font-family: SoulsBody, sans-serif;
   $font-size: 25px;
@@ -17,9 +23,11 @@ form {
 }
 
 .picker-container {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .die-loader {
