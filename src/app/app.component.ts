@@ -29,7 +29,7 @@ export class AppComponent {
     const numGen = this.genForm.value.numGen ?? 2;
 
     if (numGen < chars.length) {
-      const ids = [29, 10];
+      const ids = [];
       while (ids.length < numGen) {
         const newIndex = Math.floor(Math.random() * chars.length);
         if (ids.indexOf(newIndex) === -1) ids.push(newIndex);
