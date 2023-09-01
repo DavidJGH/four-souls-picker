@@ -15,13 +15,11 @@
 }
 
 html {
-  background: #a8c1d3;
+  background: #a8c1d3 url("assets/imgs/bg.png") repeat center center;
 }
 
 body {
   margin: 0;
-  background-image: url("assets/imgs/bg.png");
-  background-repeat: repeat;
 }
 
 * {
