@@ -38,4 +38,10 @@ export class CardComponent {
       this.cardLoaded.emit();
     }
   }
+
+  tap() {
+    if (this.tappable) {
+      this.tapped = !this.tapped;
+    }
+  }
 }
