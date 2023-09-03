@@ -1,6 +1,6 @@
-<center>
+<p align="center">
   <img src="src/assets/imgs/logo_light.png" style="width: 50%" alt="Four Souls Unofficial Character Randomiser">
-</center>
+</p>
 
 
 ## Attributions:
