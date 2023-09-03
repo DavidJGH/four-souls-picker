@@ -1,13 +1,14 @@
-import {ChangeDetectorRef, Component} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Char, charsBySet, sets} from './models/char.model';
+import { inject } from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   readonly maxSelect = 5;
   readonly numbers: number[] = [];
 
@@ -77,5 +78,9 @@ export class AppComponent {
     if (this.loadIndex < this.charOptions.length) {
       this.loadIndex++;
     }
+  }
+
+  ngOnInit() {
+    inject();
   }
 }
