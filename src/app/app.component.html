@@ -21,7 +21,7 @@
 
 <app-char-display *ngIf="char" [char]="char" (back)="back()"></app-char-display>
 
-<div class="settings-container">
+<div class="settings-container" *ngIf="!char">
   <div class="settings" (click)="settingsOpen = !settingsOpen">
     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-gear-fill"
          viewBox="0 0 16 16">

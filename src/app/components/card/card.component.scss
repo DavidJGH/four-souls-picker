@@ -21,11 +21,11 @@
   }
 
   .flipped {
-    transform: rotateY(180deg);
+    transform: translateZ(1000px) rotateY(180deg);
   }
 
   .flipped.tapped {
-    transform: rotate(90deg) scale(0.733231707) rotateY(180deg);
+    transform: translateZ(1000px) rotate(90deg) scale(0.733231707) rotateY(180deg);
   }
 
   .flip {
@@ -35,6 +35,7 @@
     width: 40%;
     height: auto;
     z-index: 5;
+    transform: translateZ(2000px);
   }
 
   .tap {
@@ -44,6 +45,7 @@
     padding: 15px 20px;
     background: #6096bab2;
     z-index: 5;
+    transform: translateZ(2000px);
   }
 
   .tap:hover {
