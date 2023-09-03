@@ -90,25 +90,40 @@ form {
 
 .settings-container {
 
+  &.closed {
+    .settings {
+      svg {
+        transform: rotate(135deg);
+      }
+    }
+
+    .settings-menu {
+      right: -320px;
+    }
+  }
+
   .settings {
     position: fixed;
     top: 0;
     right: 0;
     color: #dce1e7;
     background: #2e598c;
-    padding: 15px 15px 9px 15px;
+    padding: 12px 12px 9px 15px;
     border-radius: 0 0 0 15px;
 
     cursor: pointer;
 
     z-index: 25;
     filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.25));
+
+    svg {
+      transition: transform .5s;
+    }
   }
 
   .settings-menu {
 
     filter: drop-shadow(-5px 5px 10px rgba(0, 0, 0, 0.25));
-    border: 5px solid #274c77;
     border-top: none;
     border-right: none;
 
@@ -118,39 +133,48 @@ form {
 
     z-index: 20;
 
-    padding: 10px 20px 20px 10px;
+    padding: 10px 15px 17px 15px;
     border-radius: 0 0 0 15px;
 
-    background: #4a7cb7;
+    background: rgb(39, 76, 119);
+    background: linear-gradient(180deg, rgba(39, 76, 119, 1) 0%, rgba(39, 76, 119, 1) 35%, rgb(208, 213, 218) 35%, rgb(208, 213, 218) 100%);
 
     transform-origin: top right;
     transition: right .5s;
 
-    &.closed {
-      right: -300px;
-    }
-
     .settings-title {
       font-size: 25px;
-      padding-top: 18px;
+      padding-top: 15px;
       padding-bottom: 15px;
-      padding-left: 23px;
+      padding-left: 30px;
+      color: #dce1e7;
     }
 
-    .sets-list {
-      text-align: left;
+    .settings-form {
+      background: #dce1e7;
+      margin-top: 10px;
+      padding: 20px 15px;
+      border-radius: 15px;
 
-      .set-entry {
-        padding-top: 3px;
+      filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
 
-        user-select: none;
+      .sets-list {
+        text-align: left;
 
-        label {
-          vertical-align: text-top;
-        }
+        .set-entry {
+          padding-top: 2px;
 
-        input {
-          accent-color: #c55151;
+          user-select: none;
+
+          label {
+            vertical-align: text-top;
+            line-height: 28px;
+            padding-left: 5px;
+          }
+
+          input {
+            accent-color: #c55151;
+          }
         }
       }
     }
