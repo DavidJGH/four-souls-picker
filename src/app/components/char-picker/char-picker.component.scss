@@ -26,11 +26,6 @@ $width: calc(100vw - 25px);
 
   .card-container {
     display: flex;
-
-    > * {
-      flex: .5;
-      margin: 1%;
-    }
   }
 
   .load-container {

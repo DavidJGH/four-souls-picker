@@ -1,8 +1,11 @@
 <div class="card" *ngIf="front != 'none'">
-  <img (load)="frontLoaded()" class="card-img" [ngClass]="{ tapped, flipped }" [src]="front" width="962" height="1312" alt="card">
-  <img (load)="backLoaded()" class="card-img card-back" *ngIf="back && back != 'none'" [ngClass]="{ tapped, flipped: !flipped }" [src]="back" width="962" height="1312" alt="card-back">
+  <img (load)="frontLoaded()" class="card-img" [ngClass]="{ tapped, flipped }" [src]="front" width="962" height="1312"
+       alt="card">
+  <img (load)="backLoaded()" class="card-img card-back" *ngIf="back && back != 'none'"
+       [ngClass]="{ tapped, flipped: !flipped }" [src]="back" width="962" height="1312" alt="card-back">
   <img class="flip" ngSrc="assets/imgs/flip.png"
        *ngIf="back && back != 'none'" (click)="flipped = !flipped" alt="flip" height="164" width="164">
   <button class="tap"
-          *ngIf="tappable" (click)="tapped = !tapped">Tap</button>
+          *ngIf="tappable" (click)="tapped = !tapped">Tap
+  </button>
 </div>

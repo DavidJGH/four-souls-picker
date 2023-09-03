@@ -1,7 +1,24 @@
+:host {
+  flex: .5;
+  margin: 1%;
+
+  @media (max-height: 467px) and (orientation: landscape) {
+    height: 95vh;
+  }
+}
+
 .card {
   width: 100%;
-  position: relative;
+  height: 100%;
   user-select: none;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  >div {
+    position: relative;
+  }
 
   .card-img {
     width: 100%;
@@ -9,6 +26,11 @@
     border-radius: 8px;
     transition: transform .4s;
     backface-visibility: hidden;
+
+    @media (max-height: 467px) and (orientation: landscape) {
+      width: auto;
+      height: 100%;
+    }
   }
 
   .card-back {
@@ -43,13 +65,13 @@
     bottom: 10px;
     left: 5px;
     padding: 15px 20px;
-    background: #6096bab2;
+    background: rgba(96, 150, 186, 0.7);
     z-index: 5;
     transform: translateZ(2000px);
   }
 
   .tap:hover {
-    background: #6ca8d0d2;
+    background: rgba(108, 168, 208, 0.7);
   }
 
   .tap:active {
