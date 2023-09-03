@@ -20,7 +20,7 @@
     width: 100%;
     height: auto;
     border-radius: 8px;
-    transition: transform .4s;
+    transition: transform .4s, scale .4s cubic-bezier(0.395, -0.600, 0.820, 0.045), rotate .4s;
     backface-visibility: hidden;
 
     @media (max-height: 467px) and (orientation: landscape) {
@@ -35,15 +35,13 @@
   }
 
   .tapped {
-    transform: rotate(90deg) scale(0.733231707);
+    transition: transform .4s, scale .4s cubic-bezier(0.090, 1.640, 0.235, 1.620), rotate .4s;
+    scale: 0.733231707;
+    rotate: 90deg;
   }
 
   .flipped {
     transform: translateZ(1000px) rotateY(180deg);
-  }
-
-  .flipped.tapped {
-    transform: translateZ(1000px) rotate(90deg) scale(0.733231707) rotateY(180deg);
   }
 
   .flip {
