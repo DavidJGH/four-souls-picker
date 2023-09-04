@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Char, charsBySet, sets} from './models/char.model';
-import { inject } from '@vercel/analytics';
+import {inject} from '@vercel/analytics';
 
 @Component({
   selector: 'app-root',
@@ -26,19 +26,29 @@ export class AppComponent implements OnInit {
 
   sets = sets;
 
-  setsForm: FormGroup;
+  settingsForm: FormGroup;
 
   get includedSets(): string[] {
-    return sets.filter((set) => this.setsForm.value[set])
+    return sets.filter((set) => this.settingsForm.value["set-" + set])
   }
 
   get chars(): Char[] {
-    return this.includedSets.map((set) => charsBySet[set]).flat();
+    let currentChars = this.includedSets.map((set) => charsBySet[set]).flat();
+
+    console.log(this.settingsForm.value["exclude-threeplus"]);
+    if (this.settingsForm.value["exclude-threeplus"]) {
+      currentChars = currentChars.filter((char) => !char.threePlus);
+    }
+
+    return currentChars;
   }
 
   constructor(private readonly changeDetectorRef: ChangeDetectorRef) {
     this.numbers = Array(this.maxSelect).fill(0).map((x, i) => i + 1);
-    this.setsForm = new FormGroup(Object.fromEntries(sets.map(set => [set, new FormControl(true)])));
+    this.settingsForm = new FormGroup({
+      ...Object.fromEntries(sets.map(set => ["set-" + set, new FormControl(true)])),
+      'exclude-threeplus': new FormControl(false)
+    });
   }
 
   generateChars() {

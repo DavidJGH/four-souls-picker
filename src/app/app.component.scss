@@ -90,6 +90,8 @@ form {
 
 .settings-container {
 
+  $settings-width: 270px;
+
   &.closed {
     .settings {
       svg {
@@ -98,7 +100,7 @@ form {
     }
 
     .settings-menu {
-      right: -320px;
+      right: calc(($settings-width + 30px + 30px + 20px) * -1);
     }
   }
 
@@ -148,7 +150,8 @@ form {
       font-size: 25px;
       padding-top: 15px;
       padding-bottom: 15px;
-      padding-left: 35px;
+      padding-right: 66px;
+      text-align: center;
       color: #dce1e7;
     }
 
@@ -160,22 +163,34 @@ form {
 
       filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
 
-      .sets-list {
-        text-align: left;
+      width: $settings-width;
 
-        .set-entry {
-          padding-top: 2px;
+      .settings-category {
 
-          user-select: none;
+        &:not(:first-child) {
+          padding-top: 25px;
+        }
 
-          label {
-            vertical-align: text-top;
-            line-height: 28px;
-            padding-left: 5px;
-          }
+        .settings-list {
+          text-align: left;
 
-          input {
-            accent-color: #c55151;
+          .settings-entry {
+            padding-top: 2px;
+
+            user-select: none;
+
+            display: flex;
+
+            label {
+              vertical-align: text-top;
+              line-height: 28px;
+              padding-left: 5px;
+            }
+
+            input {
+              accent-color: #c55151;
+              translate: 0 -1px;
+            }
           }
         }
       }

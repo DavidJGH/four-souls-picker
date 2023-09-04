@@ -33,14 +33,30 @@
     <div class="settings-title">
       SETTINGS!
     </div>
-    <form [formGroup]="setsForm" class="settings-form">
-      <div>
-        Included Sets:
+    <form [formGroup]="settingsForm" class="settings-form">
+      <div class="settings-category">
+        <div>
+          Included Sets:
+        </div>
+        <div class="settings-list">
+          <div class="settings-entry" *ngFor="let set of sets">
+            <input type="checkbox" [id]="'set-'+set" [name]="'set-'+set" [formControlName]="'set-'+set"/>
+            <label [for]="'set-'+set">{{set}}</label>
+          </div>
+        </div>
       </div>
-      <div class="sets-list">
-        <div class="set-entry" *ngFor="let set of sets">
-          <input type="checkbox" [id]="set" [name]="set" [formControlName]="set"/>
-          <label [for]="set">{{set}}</label>
+      <div class="settings-category">
+        <div>
+          Options:
+        </div>
+        <div class="settings-list">
+          <div class="settings-entry">
+            <div>
+              <input type="checkbox" id="exclude-threeplus" name="exclude-threeplus"
+                     formControlName="exclude-threeplus"/>
+            </div>
+            <label for="exclude-threeplus">Exclude 3+ Player Characters</label>
+          </div>
         </div>
       </div>
     </form>
