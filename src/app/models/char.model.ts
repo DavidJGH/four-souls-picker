@@ -5,6 +5,8 @@ export interface Char {
   item: string,
   itemBack: string,
   itemTappable: boolean,
+  hasCounter: boolean,
+  startCounters: number,
   threePlus: boolean,
 }
 
@@ -19,6 +21,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 1,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -28,6 +32,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 2,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -37,6 +43,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 3,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -46,6 +54,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 4,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -55,6 +65,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 5,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -64,6 +76,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 6,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -73,6 +87,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 7,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -82,6 +98,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 8,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -91,6 +109,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 9,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -100,6 +120,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 10,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -109,6 +131,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 11,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     }
   ],
@@ -120,6 +144,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 12,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -129,6 +155,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 13,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -138,6 +166,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 14,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -147,6 +177,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 15,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     }
   ],
@@ -158,6 +190,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 16,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -167,6 +201,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 17,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -176,6 +212,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 18,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -185,6 +223,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 19,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     }
   ],
@@ -196,6 +236,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 20,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -205,6 +247,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 21,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     },
     {
@@ -214,6 +258,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 22,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     },
     {
@@ -223,6 +269,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 23,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -232,6 +280,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 24,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -241,6 +291,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 25,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -250,6 +302,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 26,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -259,6 +313,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 27,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -268,6 +324,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 28,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -277,6 +335,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 29,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -286,6 +346,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 30,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -295,6 +357,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 31,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -304,6 +368,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 32,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     },
     {
@@ -313,6 +379,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 33,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -322,6 +390,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 34,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -331,6 +401,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 35,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -340,6 +412,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 36,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -349,6 +423,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 37,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -358,6 +434,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_revenant.png',
       itemTappable: true,
       id: 38,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -367,6 +445,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 39,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     }
   ],
@@ -378,6 +458,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 40,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -387,6 +469,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 41,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -396,6 +480,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 42,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -405,6 +491,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 43,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -414,6 +502,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 44,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -423,6 +513,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 45,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -432,6 +524,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 46,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     },
     {
@@ -441,6 +535,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 47,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -450,6 +546,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 48,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -459,6 +557,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 49,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -468,6 +568,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 50,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     },
     {
@@ -477,6 +579,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 51,
+      hasCounter: true,
+      startCounters: 3,
       threePlus: false
     },
     {
@@ -486,6 +590,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 52,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: true
     },
     {
@@ -495,6 +601,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 53,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -504,6 +612,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 54,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -513,6 +623,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-booster_v20.png',
       itemTappable: true,
       id: 55,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -522,6 +634,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 56,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -531,6 +645,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 57,
+      hasCounter: true,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -540,6 +656,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: false,
       id: 58,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     },
     {
@@ -549,6 +667,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 59,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     }
   ],
@@ -560,6 +680,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemBack: 'none',
       itemTappable: true,
       id: 60,
+      hasCounter: false,
+      startCounters: 0,
       threePlus: false
     }
   ]
