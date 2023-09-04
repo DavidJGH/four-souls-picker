@@ -49,6 +49,10 @@ button:active {
   top: 1px;
 }
 
+button:disabled {
+  background: #7d99aa;
+}
+
 .vignette {
   position: fixed;
   top: 0;

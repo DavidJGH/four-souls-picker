@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
 import {Char} from '../../models/char.model';
 
 @Component({
@@ -6,10 +6,28 @@ import {Char} from '../../models/char.model';
   templateUrl: './char-display.component.html',
   styleUrls: ['./char-display.component.scss']
 })
-export class CharDisplayComponent {
+export class CharDisplayComponent implements OnChanges {
   @Input()
   char?: Char = undefined;
 
   @Output()
   back = new EventEmitter();
+
+  counter = 0;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['char'] && this.char) {
+      this.counter = this.char.startCounters;
+    }
+  }
+
+  addCounter() {
+    this.counter++;
+  }
+
+  subtractCounter() {
+    if (this.counter > 0) {
+      this.counter--;
+    }
+  }
 }

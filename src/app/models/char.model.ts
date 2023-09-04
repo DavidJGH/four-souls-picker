@@ -459,7 +459,7 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       itemTappable: false,
       id: 40,
       hasCounter: true,
-      startCounters: 0,
+      startCounters: 6,
       threePlus: false
     },
     {

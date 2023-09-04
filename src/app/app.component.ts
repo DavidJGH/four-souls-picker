@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
   get chars(): Char[] {
     let currentChars = this.includedSets.map((set) => charsBySet[set]).flat();
 
-    console.log(this.settingsForm.value["exclude-threeplus"]);
     if (this.settingsForm.value["exclude-threeplus"]) {
       currentChars = currentChars.filter((char) => !char.threePlus);
     }

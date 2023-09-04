@@ -1,7 +1,15 @@
 <div class="container">
-  <div class="card-container">
-    <app-card [front]="char?.front" [back]="char?.back" [tappable]="true"></app-card>
-    <app-card *ngIf="char?.item != 'none'" [front]="char?.item" [back]="char?.itemBack" [tappable]="char?.itemTappable ?? false"></app-card>
+  <div class="hand-container">
+    <div class="card-container">
+      <app-card [front]="char?.front" [back]="char?.back" [tappable]="true"></app-card>
+      <app-card *ngIf="char?.item != 'none'" [front]="char?.item" [back]="char?.itemBack"
+                [tappable]="char?.itemTappable ?? false"></app-card>
+    </div>
+    <div *ngIf="char?.hasCounter" class="counter-container">
+      <button (click)="subtractCounter()" class="counter-button">-1</button>
+      <div class="counter-value">{{counter}}</div>
+      <button (click)="addCounter()" class="counter-button">+1</button>
+    </div>
   </div>
 
   <div class="button-container">
