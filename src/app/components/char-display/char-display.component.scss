@@ -56,9 +56,12 @@ $width: 100vw;
     }
   }
 
-  .hand-container {
+  .middle-container {
     flex: 1;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .counter-container {
@@ -99,6 +102,26 @@ $width: 100vw;
       width: 25px;
 
       font-size: 20px;
+    }
+  }
+}
+
+.credits-container {
+  margin-top: 20px;
+  margin-left: 20px;
+
+  @media (min-width: 600px) and (orientation: landscape) {
+    margin: 0;
+  }
+
+  .credit {
+    font-family: SoulsBody, sans-serif;
+    font-size: 20px;
+    color: #343030;
+
+    * {
+      font-size: 20px;
+      margin-bottom: 10px;
     }
   }
 }

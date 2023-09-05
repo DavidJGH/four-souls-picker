@@ -165,6 +165,29 @@ form {
 
       width: $settings-width;
 
+      label {
+        vertical-align: text-top;
+        line-height: 28px;
+        padding-left: 5px;
+        user-select: none;
+      }
+
+      input {
+        accent-color: #c55151;
+        translate: 0 -1px;
+      }
+
+      .title-line {
+        height: 3px;
+        background: #a8adaf;
+        border-radius: 2px;
+        margin: 0 40px;
+      }
+
+      .separator {
+        height: 15px;
+      }
+
       .settings-category {
 
         &:not(:first-child) {
@@ -177,19 +200,17 @@ form {
           .settings-entry {
             padding-top: 2px;
 
-            user-select: none;
-
             display: flex;
+          }
 
-            label {
-              vertical-align: text-top;
-              line-height: 28px;
-              padding-left: 5px;
-            }
+          .credits {
+            margin-left: 45px;
+            font-size: 20px;
 
-            input {
-              accent-color: #c55151;
-              translate: 0 -1px;
+            color: #5e5757;
+
+            * {
+              font-size: 20px;
             }
           }
         }
@@ -201,11 +222,4 @@ form {
 footer {
   text-align: center;
   padding: 10px;
-
-
-  a {
-    color: #274c77;
-    font-size: 25px;
-    font-family: SoulsBody, sans-serif;
-  }
 }

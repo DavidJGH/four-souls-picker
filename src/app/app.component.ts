@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {Char, charsBySet, sets} from './models/char.model';
+import {Char, charsBySet, customSets, sets} from './models/char.model';
 import {inject} from '@vercel/analytics';
 
 @Component({
@@ -25,11 +25,20 @@ export class AppComponent implements OnInit {
   });
 
   sets = sets;
+  customSets = customSets;
 
   settingsForm: FormGroup;
 
+  get allOfficialChecked(): boolean {
+    return sets.every((set) => this.settingsForm.value["set-" + set]);
+  }
+
+  get allCustomChecked(): boolean {
+    return customSets.every((set) => this.settingsForm.value["set-" + set.name]);
+  }
+
   get includedSets(): string[] {
-    return sets.filter((set) => this.settingsForm.value["set-" + set])
+    return sets.concat(customSets.map((set) => set.name)).filter((set) => this.settingsForm.value["set-" + set]);
   }
 
   get chars(): Char[] {
@@ -46,6 +55,7 @@ export class AppComponent implements OnInit {
     this.numbers = Array(this.maxSelect).fill(0).map((x, i) => i + 1);
     this.settingsForm = new FormGroup({
       ...Object.fromEntries(sets.map(set => ["set-" + set, new FormControl(true)])),
+      ...Object.fromEntries(customSets.map(set => ["set-" + set.name, new FormControl(false)])),
       'exclude-threeplus': new FormControl(false)
     });
   }
@@ -91,5 +101,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     inject();
+  }
+
+  officialSetsChange($event: Event) {
+    const checked = ($event.target as HTMLInputElement).checked;
+    this.settingsForm.patchValue(Object.fromEntries(sets.map(set => ["set-" + set, checked])))
+  }
+
+  customSetsChange($event: Event) {
+    const checked = ($event.target as HTMLInputElement).checked;
+    this.settingsForm.patchValue(Object.fromEntries(customSets.map(set => ["set-" + set.name, checked])))
   }
 }

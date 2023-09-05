@@ -8,7 +8,41 @@ export interface Char {
   hasCounter: boolean,
   startCounters: number,
   threePlus: boolean,
+  cardCredits: Credit[]
 }
+
+export interface CustomSet {
+  name: string,
+  from: User
+}
+
+export interface Credit {
+  for: string,
+  user: User
+}
+
+export interface User {
+  name: string,
+  twitter: string
+}
+
+
+const crossroadsts: User = {
+  name: 'Crossroads',
+  twitter: 'https://twitter.com/crossroads__art'
+}
+
+const HamBerry: User = {
+  name: 'HamBerry',
+  twitter: 'https://twitter.com/HamBerry_art'
+}
+
+export const customSets: CustomSet[] = [
+  {
+    name: 'Grayfruit Expansion',
+    from: crossroadsts,
+  }
+]
 
 export const sets = ['Base Game V2', 'Gold Box V2', 'Four Souls+ V2', 'Requiem', 'Requiem Warp Zone', 'Tapeworm'];
 
@@ -23,7 +57,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 1,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-maggy.png',
@@ -34,7 +69,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 2,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-cain.png',
@@ -45,7 +81,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 3,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-judas.png',
@@ -56,7 +93,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 4,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-blue_baby.png',
@@ -67,7 +105,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 5,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-eve.png',
@@ -78,7 +117,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 6,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-samson.png',
@@ -89,7 +129,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 7,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-lazarus.png',
@@ -100,7 +141,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 8,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-lilith.png',
@@ -111,7 +153,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 9,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-the_forgotten.png',
@@ -122,7 +165,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 10,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/b2-eden.png',
@@ -133,7 +177,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 11,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     }
   ],
   'Gold Box V2': [
@@ -146,7 +191,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 12,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-the_lost.png',
@@ -157,7 +203,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 13,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-the_keeper.png',
@@ -168,7 +215,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 14,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/g2-apollyon.png',
@@ -179,7 +227,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 15,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     }
   ],
   'Four Souls+ V2': [
@@ -192,7 +241,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 16,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-dark_judas.png',
@@ -203,7 +253,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 17,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-guppy.png',
@@ -214,7 +265,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 18,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/fsp2-whore_of_babylon.png',
@@ -225,7 +277,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 19,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     }
   ],
   'Requiem': [
@@ -238,7 +291,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 20,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-jacob_and_esau.png',
@@ -249,7 +303,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 21,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_broken.png',
@@ -260,7 +315,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 22,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_dauntless.png',
@@ -271,7 +327,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 23,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_hoarder.png',
@@ -282,7 +339,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 24,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_deceiver.png',
@@ -293,7 +351,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 25,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_soiled.png',
@@ -304,7 +363,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 26,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_curdled.png',
@@ -315,7 +375,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 27,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_savage.png',
@@ -326,7 +387,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 28,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_benighted.png',
@@ -337,7 +399,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 29,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_enigma.png',
@@ -348,7 +411,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 30,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_capricious.png',
@@ -359,7 +423,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 31,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_baleful.png',
@@ -370,7 +435,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 32,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_harlot.png',
@@ -381,7 +447,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 33,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_miser.png',
@@ -392,7 +459,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 34,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_empty.png',
@@ -403,7 +471,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 35,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_fettered.png',
@@ -414,7 +483,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 36,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_zealot.png',
@@ -425,7 +495,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 37,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-the_deserter.png',
@@ -436,7 +507,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 38,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/r-flash_isaac.png',
@@ -447,7 +519,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 39,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     }
   ],
   'Requiem Warp Zone': [
@@ -460,7 +533,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 40,
       hasCounter: true,
       startCounters: 6,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-steven.png',
@@ -471,7 +545,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 41,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-bum_bo_the_weird.png',
@@ -482,7 +557,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 42,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-edmund.png',
@@ -493,7 +569,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 43,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-abe.png',
@@ -504,7 +581,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 44,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-baba.png',
@@ -515,7 +593,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 45,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-blind_johnny.png',
@@ -526,7 +605,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 46,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-blue_archer.png',
@@ -537,7 +617,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 47,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-boyfriend.png',
@@ -548,7 +629,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 48,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-captain_viridian.png',
@@ -559,7 +641,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 49,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-crewmate.png',
@@ -570,7 +653,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 50,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-guy_spelunky.png',
@@ -581,7 +665,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 51,
       hasCounter: true,
       startCounters: 3,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-johnny.png',
@@ -592,7 +677,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 52,
       hasCounter: false,
       startCounters: 0,
-      threePlus: true
+      threePlus: true,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-pink_knight.png',
@@ -603,7 +689,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 53,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-psycho_goreman.png',
@@ -614,7 +701,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 54,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-quote.png',
@@ -625,7 +713,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 55,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-salad_fingers.png',
@@ -636,7 +725,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 56,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-the_knight.png',
@@ -647,7 +737,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 57,
       hasCounter: true,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-the_silent.png',
@@ -658,7 +749,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 58,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     },
     {
       front: 'https://foursouls.com/wp-content/uploads/2022/01/rwz-yung_venuz.png',
@@ -669,7 +761,8 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 59,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
     }
   ],
   'Tapeworm': [
@@ -682,7 +775,69 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       id: 60,
       hasCounter: false,
       startCounters: 0,
-      threePlus: false
+      threePlus: false,
+      cardCredits: []
+    }
+  ],
+  'Grayfruit Expansion': [
+    {
+      front: 'assets/imgs/cards/baz_iodine_character.png',
+      back: 'none',
+      item: 'assets/imgs/cards/golden_seed.png',
+      itemBack: 'none',
+      itemTappable: false,
+      id: 61,
+      hasCounter: true,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: crossroadsts
+        }
+      ]
+    },
+    {
+      front: 'assets/imgs/cards/bella_character.png',
+      back: 'none',
+      item: 'assets/imgs/cards/odd_bell.png',
+      itemBack: 'none',
+      itemTappable: true,
+      id: 62,
+      hasCounter: true,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'card design',
+          user: crossroadsts
+        },
+        {
+          for: 'art',
+          user: HamBerry
+        }
+      ]
+    },
+    {
+      front: 'assets/imgs/cards/grayfruit_character.png',
+      back: 'none',
+      item: 'assets/imgs/cards/bizarre_fruit.png',
+      itemBack: 'none',
+      itemTappable: true,
+      id: 63,
+      hasCounter: false,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'card design',
+          user: crossroadsts
+        },
+        {
+          for: 'art',
+          user: HamBerry
+        }
+      ]
     }
   ]
 }

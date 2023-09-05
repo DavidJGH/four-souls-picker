@@ -36,8 +36,10 @@
     <form [formGroup]="settingsForm" class="settings-form">
       <div class="settings-category">
         <div>
-          Included Sets:
+          <input type="checkbox" id="official-sets" name="official-sets" [checked]="allOfficialChecked" (change)="officialSetsChange($event)"/>
+          <label for="official-sets">Official Sets</label>
         </div>
+        <div class="title-line"></div>
         <div class="settings-list">
           <div class="settings-entry" *ngFor="let set of sets">
             <input type="checkbox" [id]="'set-'+set" [name]="'set-'+set" [formControlName]="'set-'+set"/>
@@ -47,8 +49,28 @@
       </div>
       <div class="settings-category">
         <div>
-          Options:
+          <input type="checkbox" id="custom-sets" name="custom-sets" [checked]="allCustomChecked" (change)="customSetsChange($event)"/>
+          <label for="custom-sets">Custom Sets</label>
         </div>
+        <div class="title-line"></div>
+        <div class="settings-list">
+          <div *ngFor="let set of customSets">
+            <div class="settings-entry">
+              <div>
+                <input type="checkbox" [id]="'set-'+set.name" [name]="'set-'+set.name" [formControlName]="'set-'+set.name"/>
+              </div>
+              <label [for]="'set-'+set.name">{{set.name}}</label>
+            </div>
+            <div class="credits">by <a [href]="set.from.twitter" target="_blank">{{set.from.name}}</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="settings-category">
+        <div>
+          Options
+        </div>
+        <div class="title-line"></div>
         <div class="settings-list">
           <div class="settings-entry">
             <div>
