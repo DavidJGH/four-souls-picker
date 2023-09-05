@@ -141,7 +141,7 @@ form {
     border-radius: 0 0 0 15px;
 
     background: rgb(39, 76, 119);
-    background: linear-gradient(180deg, rgba(39, 76, 119, 1) 0%, rgba(39, 76, 119, 1) 35%, rgb(208, 213, 218) 35%, rgb(208, 213, 218) 100%);
+    background: linear-gradient(180deg, rgb(39, 76, 119) 0, rgb(39, 76, 119) 140px, rgb(208, 213, 218) 140px, rgb(208, 213, 218) 100%);
 
     transform-origin: top right;
     transition: right .5s;
@@ -160,6 +160,9 @@ form {
       margin-top: 10px;
       padding: 20px 15px;
       border-radius: 15px;
+
+      max-height: calc(100vh - 137px);
+      overflow-y: auto;
 
       filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
 
