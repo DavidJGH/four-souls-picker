@@ -840,6 +840,23 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
           user: HamBerry
         }
       ]
+    },
+    {
+      front: 'assets/imgs/cards/lark.png',
+      back: 'none',
+      item: 'assets/imgs/cards/peculiar_feather.png',
+      itemBack: 'none',
+      itemTappable: true,
+      id: 64,
+      hasCounter: false,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: crossroadsts
+        }
+      ]
     }
   ]
 }
