@@ -13,6 +13,7 @@ export interface Char {
 
 export interface CustomSet {
   name: string,
+  link: string,
   from: User
 }
 
@@ -23,23 +24,24 @@ export interface Credit {
 
 export interface User {
   name: string,
-  twitter: string
+  link: string
 }
 
 
 const crossroadsts: User = {
   name: 'Crossroads',
-  twitter: 'https://twitter.com/crossroads__art'
+  link: 'https://twitter.com/crossroads__art'
 }
 
 const HamBerry: User = {
   name: 'HamBerry',
-  twitter: 'https://twitter.com/HamBerry_art'
+  link: 'https://twitter.com/HamBerry_art'
 }
 
 export const customSets: CustomSet[] = [
   {
     name: 'Grayfruit Expansion',
+    link: 'https://printfoursouls.com/booster/grayfruit-expansion',
     from: crossroadsts,
   }
 ]

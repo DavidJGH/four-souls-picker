@@ -90,7 +90,7 @@ form {
 
 .settings-container {
 
-  $settings-width: 270px;
+  $settings-width: 285px;
 
   &.closed {
     .settings {
@@ -201,6 +201,11 @@ form {
             padding-top: 2px;
 
             display: flex;
+
+            i {
+              font-size: 22px;
+              margin-left: 5px;
+            }
           }
 
           .credits {

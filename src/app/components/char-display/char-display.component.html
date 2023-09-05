@@ -14,7 +14,7 @@
     </div>
     <div class="credits-container">
       <div class="credit" *ngFor="let credit of char?.cardCredits">
-        {{credit.for}} by <a [href]="credit.user.twitter" target="_blank">{{credit.user.name}}</a>
+        {{credit.for}} by <a [href]="credit.user.link" target="_blank">{{credit.user.name}}</a>
       </div>
     </div>
   </div>
