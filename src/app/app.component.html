@@ -62,7 +62,7 @@
               <label [for]="'set-'+set.name">{{set.name}}</label>
               <a [href]="set.link" target="_blank"><i class="bi bi-link-45deg"></i></a>
             </div>
-            <div class="credits">by <a [href]="set.from.link" target="_blank">{{set.from.name}}</a></div>
+            <div class="credits">by <a [href]="set.from?.link" target="_blank">{{set.from?.name}}</a></div>
           </div>
         </div>
       </div>

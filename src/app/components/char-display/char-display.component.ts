@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
-import {Char} from '../../models/char.model';
+import {CharWithSet} from '../../models/char.model';
 
 @Component({
   selector: 'app-char-display',
@@ -8,7 +8,7 @@ import {Char} from '../../models/char.model';
 })
 export class CharDisplayComponent implements OnChanges {
   @Input()
-  char?: Char = undefined;
+  char?: CharWithSet = undefined;
 
   @Output()
   back = new EventEmitter();

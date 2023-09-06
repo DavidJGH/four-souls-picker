@@ -11,10 +11,10 @@ export interface Char {
   cardCredits: Credit[]
 }
 
-export interface CustomSet {
+export interface SetInfo {
   name: string,
   link: string,
-  from: User
+  from: User | undefined
 }
 
 export interface Credit {
@@ -27,6 +27,8 @@ export interface User {
   link: string
 }
 
+export type CharWithSet = Char & { set: SetInfo }
+
 
 const crossroadsts: User = {
   name: 'Crossroads',
@@ -38,7 +40,7 @@ const HamBerry: User = {
   link: 'https://twitter.com/HamBerry_art'
 }
 
-export const customSets: CustomSet[] = [
+export const customSets: SetInfo[] = [
   {
     name: 'Grayfruit Expansion',
     link: 'https://printfoursouls.com/booster/grayfruit-expansion',

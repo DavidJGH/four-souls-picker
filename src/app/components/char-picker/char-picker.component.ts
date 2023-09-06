@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from '@angular/core';
-import {Char} from '../../models/char.model';
+import {CharWithSet} from '../../models/char.model';
 
 @Component({
   selector: 'app-char-picker',
@@ -8,13 +8,13 @@ import {Char} from '../../models/char.model';
 })
 export class CharPickerComponent implements OnChanges {
   @Input()
-  char?: Char = undefined;
+  char?: CharWithSet = undefined;
 
   @Input()
   waitForLoad = true;
 
   @Output()
-  pickChar = new EventEmitter<Char>();
+  pickChar = new EventEmitter<CharWithSet>();
 
   @Output()
   loaded = new EventEmitter();

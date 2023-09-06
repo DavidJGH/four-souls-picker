@@ -1,6 +1,6 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {Char, charsBySet, customSets, sets} from './models/char.model';
+import {charsBySet, CharWithSet, customSets, SetInfo, sets} from './models/char.model';
 import {inject} from '@vercel/analytics';
 
 @Component({
@@ -14,11 +14,11 @@ export class AppComponent implements OnInit {
 
   settingsOpen = false;
 
-  charOptions: Char[] = [];
+  charOptions: CharWithSet[] = [];
 
   loadIndex = 0;
 
-  char: Char | undefined = undefined;
+  char: CharWithSet | undefined = undefined;
 
   genForm = new FormGroup({
     numGen: new FormControl(2)
@@ -37,12 +37,19 @@ export class AppComponent implements OnInit {
     return customSets.every((set) => this.settingsForm.value["set-" + set.name]);
   }
 
-  get includedSets(): string[] {
-    return sets.concat(customSets.map((set) => set.name)).filter((set) => this.settingsForm.value["set-" + set]);
+  get includedSets(): SetInfo[] {
+    return sets.map((name) => ({
+      name,
+      link: 'none',
+      from: undefined
+    } as SetInfo)).concat(customSets).filter((set) => this.settingsForm.value["set-" + set.name]);
   }
 
-  get chars(): Char[] {
-    let currentChars = this.includedSets.map((set) => charsBySet[set]).flat();
+  get chars(): CharWithSet[] {
+    let currentChars = this.includedSets.map((set) => charsBySet[set.name].map((char) => ({
+      ...char,
+      set
+    } as CharWithSet))).flat();
 
     if (this.settingsForm.value["exclude-threeplus"]) {
       currentChars = currentChars.filter((char) => !char.threePlus);
@@ -85,7 +92,7 @@ export class AppComponent implements OnInit {
     this.loadIndex = 0;
   }
 
-  pickChar(char: Char) {
+  pickChar(char: CharWithSet) {
     this.char = char;
   }
 
