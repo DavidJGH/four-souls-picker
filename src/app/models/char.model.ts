@@ -896,7 +896,7 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
       item: 'assets/imgs/cards/Final_Punch.png',
       itemBack: 'none',
       itemTappable: true,
-      id: 65,
+      id: 66,
       hasCounter: false,
       startCounters: 0,
       threePlus: false,
