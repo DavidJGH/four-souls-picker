@@ -16,12 +16,19 @@
   display: flex;
   justify-content: center;
 
+  .img-holder {
+    overflow: hidden;
+    aspect-ratio: 0.733231707;
+    width: 100%;
+  }
+
   .card-img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
     transition: transform .4s, scale .4s cubic-bezier(0.395, -0.600, 0.820, 0.045), rotate .4s;
     backface-visibility: hidden;
+    clip-path: inset(3.1% round 4%);
+    transform: scale(1.05);
 
     @media (max-height: 467px) and (orientation: landscape) {
       width: auto;
@@ -41,13 +48,13 @@
   }
 
   .flipped {
-    transform: translateZ(1000px) rotateY(180deg);
+    transform: scale(1.05) translateZ(1000px) rotateY(180deg);
   }
 
   .flip {
     position: absolute;
-    right: -5px;
-    top: -5px;
+    right: -3px;
+    top: -2px;
     width: 40%;
     height: auto;
     z-index: 5;
