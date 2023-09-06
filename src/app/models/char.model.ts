@@ -40,11 +40,22 @@ const HamBerry: User = {
   link: 'https://twitter.com/HamBerry_art'
 }
 
+const PommePower: User = {
+  name: 'PommePower',
+  link: 'none'
+}
+
+
 export const customSets: SetInfo[] = [
   {
     name: 'Grayfruit Expansion',
     link: 'https://printfoursouls.com/booster/grayfruit-expansion',
     from: crossroadsts,
+  },
+  {
+    name: 'PommePower\'s Custom Cards',
+    link: 'https://drive.google.com/drive/folders/1g4DtbAO2cFtntV0YD9rRNN73yfHMWtEF',
+    from: PommePower
   }
 ]
 
@@ -860,5 +871,41 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
         }
       ]
     }
+  ],
+  'PommePower\'s Custom Cards': [
+    {
+      front: 'assets/imgs/cards/Final_Lux.png',
+      back: 'none',
+      item: 'assets/imgs/cards/ray_of_light.png',
+      itemBack: 'none',
+      itemTappable: true,
+      id: 65,
+      hasCounter: false,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: PommePower
+        }
+      ]
+    },
+    {
+      front: 'assets/imgs/cards/the_player.png',
+      back: 'none',
+      item: 'assets/imgs/cards/Final_Punch.png',
+      itemBack: 'none',
+      itemTappable: true,
+      id: 65,
+      hasCounter: false,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: PommePower
+        }
+      ]
+    },
   ]
 }

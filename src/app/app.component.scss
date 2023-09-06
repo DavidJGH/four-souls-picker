@@ -90,7 +90,7 @@ form {
 
 .settings-container {
 
-  $settings-width: 285px;
+  $settings-width: 315px;
 
   &.closed {
     .settings {
@@ -173,6 +173,7 @@ form {
         line-height: 28px;
         padding-left: 5px;
         user-select: none;
+        width: 100%;
       }
 
       input {
@@ -188,7 +189,7 @@ form {
       }
 
       .separator {
-        height: 15px;
+        height: 10px;
       }
 
       .settings-category {
@@ -216,6 +217,8 @@ form {
             font-size: 20px;
 
             color: #5e5757;
+
+            margin-bottom: 5px;
 
             * {
               font-size: 20px;

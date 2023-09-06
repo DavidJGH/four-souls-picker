@@ -62,11 +62,14 @@
               <label [for]="'set-'+set.name">{{set.name}}</label>
               <a [href]="set.link" target="_blank"><i class="bi bi-link-45deg"></i></a>
             </div>
-            <div class="credits">by <a [href]="set.from?.link" target="_blank">{{set.from?.name}}</a></div>
+            <div class="credits">
+              by
+              <a *ngIf="set.from?.link != 'none'" [href]="set.from?.link" target="_blank">{{set.from?.name}}</a>
+              <ng-container *ngIf="set.from?.link == 'none'">{{set.from?.name}}</ng-container>
+            </div>
           </div>
         </div>
       </div>
-      <div class="separator"></div>
       <div class="settings-category">
         <div>
           Options
