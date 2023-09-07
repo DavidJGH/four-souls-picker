@@ -45,6 +45,11 @@ const PommePower: User = {
   link: 'none'
 }
 
+const MrMcMonkey: User = {
+  name: 'MrMcMonkey',
+  link: 'none'
+}
+
 
 export const customSets: SetInfo[] = [
   {
@@ -56,6 +61,11 @@ export const customSets: SetInfo[] = [
     name: 'PommePower\'s Custom Cards',
     link: 'https://drive.google.com/drive/folders/1g4DtbAO2cFtntV0YD9rRNN73yfHMWtEF',
     from: PommePower
+  },
+  {
+    name: 'MrMcMonkey\'s Pack',
+    link: 'https://drive.google.com/drive/folders/1aqaCUwXiUJNTPgIQoCL-GunZc9LLQoEQ',
+    from: MrMcMonkey
   }
 ]
 
@@ -907,5 +917,41 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
         }
       ]
     },
-  ]
+  ],
+  'MrMcMonkey\'s Pack': [
+    {
+      front: 'assets/imgs/cards/flashIsaac_Ditto_character.png',
+      back: 'none',
+      item: 'none',
+      itemBack: 'none',
+      itemTappable: false,
+      id: 67,
+      hasCounter: false,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: MrMcMonkey
+        }
+      ]
+    },
+    {
+      front: 'assets/imgs/cards/TheMissed_Character.png',
+      back: 'none',
+      item: 'assets/imgs/cards/TheMissed_StartingItem_FadingMemory.png',
+      itemBack: 'none',
+      itemTappable: true,
+      id: 68,
+      hasCounter: true,
+      startCounters: 0,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: MrMcMonkey
+        }
+      ]
+    },
+  ],
 }
