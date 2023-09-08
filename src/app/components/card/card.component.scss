@@ -63,24 +63,20 @@
     transform: translateZ(2000px);
   }
 
-  .tap {
-    position: absolute;
-    bottom: 6px;
-    left: 5px;
-    padding: 15px 20px;
-    background: rgba(96, 150, 186, 0.7);
-    z-index: 5;
-    transform: translateZ(2000px);
-  }
-
-  .tap:hover {
-    background: rgba(108, 168, 208, 0.7);
-  }
-
-  .tap:active {
-    top: unset;
-    bottom: 9px;
-  }
-
 }
 
+
+.tap {
+  padding: 15px 20px;
+  background: rgba(96, 150, 186, 0.7);
+  z-index: 5;
+  transform: translateZ(2000px);
+}
+
+.tap:hover {
+  background: rgba(108, 168, 208, 0.7);
+}
+
+.tap-spacer {
+  height: 56px;
+}

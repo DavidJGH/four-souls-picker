@@ -15,6 +15,9 @@ export class CardComponent {
   @Input()
   tappable = false;
 
+  @Input()
+  displayTap = true;
+
   tapped = false;
 
   flipped = false;

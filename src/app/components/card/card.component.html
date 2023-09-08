@@ -8,7 +8,12 @@
   </div>
   <img class="flip" ngSrc="assets/imgs/flip.png"
        *ngIf="back && back != 'none'" (click)="flipped = !flipped" alt="flip" height="164" width="164">
+</div>
+<ng-container *ngIf="displayTap">
   <button class="tap"
           *ngIf="tappable" (click)="tapped = !tapped">Tap
   </button>
-</div>
+  <div class="tap-spacer"
+       *ngIf="!tappable">
+  </div>
+</ng-container>

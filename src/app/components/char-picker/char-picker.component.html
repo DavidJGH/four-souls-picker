@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card-container">
-    <app-card [front]="char?.front" [back]="char?.back" (cardLoaded)="charLoaded()"></app-card>
-    <app-card *ngIf="char?.item != 'none'" [front]="char?.item" [back]="char?.itemBack" (cardLoaded)="itemLoaded()"></app-card>
+    <app-card [front]="char?.front" [back]="char?.back" (cardLoaded)="charLoaded()" [displayTap]="false"></app-card>
+    <app-card *ngIf="char?.item != 'none'" [front]="char?.item" [back]="char?.itemBack" (cardLoaded)="itemLoaded()" [displayTap]="false"></app-card>
   </div>
 
   <button class="button-select" (click)="pickChar.emit(char)">SELECT</button>
