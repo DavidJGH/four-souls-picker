@@ -953,5 +953,22 @@ export const charsBySet: { [set: typeof sets[number]]: Char[] } = {
         }
       ]
     },
+    {
+      front: 'assets/imgs/cards/MrMcMonkey.png',
+      back: 'none',
+      item: 'assets/imgs/cards/GentlemansFightClubStarterPack.png',
+      itemBack: 'none',
+      itemTappable: false,
+      id: 69,
+      hasCounter: true,
+      startCounters: 2,
+      threePlus: false,
+      cardCredits: [
+        {
+          for: 'made',
+          user: MrMcMonkey
+        }
+      ]
+    },
   ],
 }
