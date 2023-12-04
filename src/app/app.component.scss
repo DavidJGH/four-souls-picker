@@ -60,6 +60,7 @@ form {
 
   @media (max-width: 600px) and (orientation: landscape) {
     max-height: 80vh;
+    max-height: 80svh;
     height: 500px;
     width: auto;
     margin-top: 10px;
@@ -162,6 +163,7 @@ form {
       border-radius: 15px;
 
       max-height: calc(100vh - 137px - 70px);
+      max-height: calc(100svh - 137px - 70px);
       overflow-y: auto;
 
       filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
